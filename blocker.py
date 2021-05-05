@@ -14,3 +14,9 @@ while True:
         print("Sorry Not Allowed")
         with open(hostpath, 'r+') as file:
             content = file.read()
+            
+            for site in websites:
+                if site in content:
+                    pass
+                else:
+                    file.write(redirect+" "+site+"\n")
