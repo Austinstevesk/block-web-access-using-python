@@ -20,3 +20,9 @@ while True:
                     pass
                 else:
                     file.write(redirect+" "+site+"\n")
+    else:
+        with open(hostpath, 'r+') as file:
+            content = file.readlines()
+            file.seek(0)
+            for line in content:
+                if not any(site in line for site in websites)
