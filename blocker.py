@@ -27,5 +27,6 @@ while True:
             for line in content:
                 if not any(site in line for site in websites):
                     file.write(line)
-                    
+                file.truncate()
+                  
             
